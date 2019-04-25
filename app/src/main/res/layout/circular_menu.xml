@@ -168,8 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/dashboard_myMaster"
             android:layout_centerHorizontal="true"
-
-            android:text="Masters"
+            android:text="Mahindra"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="15dp" />

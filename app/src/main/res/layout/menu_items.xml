@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/dashboard_myHoto_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,26 +26,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/dashboard_myHoto"
             android:layout_centerHorizontal="true"
-
             android:text="HOTO"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="15dp" />
 
     </RelativeLayout>
-
-    <!-- <com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView
-         android:id="@+id/dashboard_myHoto"
-         android:layout_width="60dp"
-         android:layout_height="60dp"
-         android:background="@drawable/circle"
-         android:elevation="2dp"
-         android:padding="5dp"
-         android:src="@drawable/tickets_icon"
-         android:tint="@color/colorPrimary"
-         circle:name="My HOTO">
-
-     </com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView>-->
 
     <RelativeLayout
         android:id="@+id/dashboard_myAsset_layout"
@@ -75,27 +61,7 @@
             android:textSize="15dp" />
 
     </RelativeLayout>
-    <!--<com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView
-        android:id="@+id/dashboard_myAsset"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/circle"
-        android:elevation="2dp"
-        android:padding="5dp"
-        android:src="@drawable/assets_icon"
-        android:tint="@color/colorPrimary"
-        circle:name="My Assets" />-->
 
-
-    <!-- <CircleImageView
-         android:id="@+id/main_mail_image"
-         android:layout_width="60dp"
-         android:layout_height="60dp"
-         android:background="@drawable/circle"
-         android:elevation="2dp"
-         android:src="@drawable/master_icon"
-         circle:name="My Masters"
-         android:padding="15dp" />-->
     <RelativeLayout
         android:id="@+id/dashboard_myEnergy_layout"
         android:layout_width="match_parent"
@@ -124,17 +90,8 @@
             android:textColor="@color/colorPrimary"
             android:textSize="15dp" />
 
-    </RelativeLayout>
-    <!--<com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView
-        android:id="@+id/dashboard_myEnergy"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/circle"
-        android:elevation="2dp"
-        android:padding="5dp"
-        android:src="@drawable/electricity_icon"
-        android:tint="@color/colorPrimary"
-        circle:name="My Energy" />-->
+    </RelativeLayout>-->
+
     <RelativeLayout
         android:id="@+id/dashboard_myPrevitive_layout"
         android:layout_width="match_parent"
@@ -164,16 +121,7 @@
             android:textSize="15dp" />
 
     </RelativeLayout>
-    <!--<com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView
-        android:id="@+id/dashboard_myPrevitive"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/circle"
-        android:elevation="2dp"
-        android:padding="5dp"
-        android:src="@drawable/prevetive_icon"
-        android:tint="@color/colorPrimary"
-        circle:name="My Prevetive" />-->
+
     <RelativeLayout
         android:id="@+id/dashboard_safetyTips_layout"
         android:layout_width="match_parent"
@@ -203,6 +151,7 @@
             android:textSize="15dp" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/dashboard_myIncident_layout"
         android:layout_width="match_parent"
@@ -232,15 +181,6 @@
             android:textSize="15dp" />
 
     </RelativeLayout>
-    <!-- <com.brahamaputra.mahindra.brahamaputra.commons.CircleImageView
-         android:id="@+id/dashboard_myIncident"
-         android:layout_width="60dp"
-         android:layout_height="60dp"
-         android:background="@drawable/circle"
-         android:elevation="2dp"
-         android:padding="5dp"
-         android:src="@drawable/incident_icon"
-         android:tint="@color/colorPrimary"
-         circle:name="My Incident" />-->
+
 
 </merge>
