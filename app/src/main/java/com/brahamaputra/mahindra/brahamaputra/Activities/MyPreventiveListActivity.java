@@ -62,7 +62,7 @@ public class MyPreventiveListActivity extends BaseActivity {
             }
         });
 
-        mMyPreventiveListRelativeLayoutSitePreventiveMaintenance.setOnClickListener(new View.OnClickListener() {
+        /*mMyPreventiveListRelativeLayoutSitePreventiveMaintenance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(MyEnergyListActivity.this, ElectricBillProcessList.class));
@@ -92,14 +92,14 @@ public class MyPreventiveListActivity extends BaseActivity {
                     }).show();
                 }
             }
-        });
+        });*/
     }
 
     private void assignViews() {
         mMyPreventiveListRelativeLayoutAcPreventiveMaintenance = (RelativeLayout) findViewById(R.id.MyPreventiveList_relativeLayout_acPreventiveMaintenance);
         mImgAcPreventiveMaintenance = (ImageView) findViewById(R.id.img_acPreventiveMaintenance);
-        mMyPreventiveListRelativeLayoutSitePreventiveMaintenance = (RelativeLayout) findViewById(R.id.MyPreventiveList_relativeLayout_sitePreventiveMaintenance);
-        mImgSitePreventiveMaintenance = (ImageView) findViewById(R.id.img_sitePreventiveMaintenance);
+       // mMyPreventiveListRelativeLayoutSitePreventiveMaintenance = (RelativeLayout) findViewById(R.id.MyPreventiveList_relativeLayout_sitePreventiveMaintenance);
+       // mImgSitePreventiveMaintenance = (ImageView) findViewById(R.id.img_sitePreventiveMaintenance);
         gpsTracker = new GPSTracker(MyPreventiveListActivity.this);
         alertDialogManager = new AlertDialogManager(MyPreventiveListActivity.this);
     }
