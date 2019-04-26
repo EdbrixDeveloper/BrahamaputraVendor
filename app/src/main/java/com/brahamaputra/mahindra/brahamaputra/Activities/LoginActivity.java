@@ -53,7 +53,6 @@ public class LoginActivity extends BaseActivity {
     final public int CHECK_PERMISSIONS = 123;
     private SessionManager sessionManager;
 
-
     boolean doubleBackToExitPressedOnce = false;
 
     private ImageView eyeIcon;
@@ -66,7 +65,6 @@ public class LoginActivity extends BaseActivity {
         if (validateUser()) {
             finish();
             startActivity(new Intent(LoginActivity.this, DashboardCircularActivity.class));
-            //startActivity(new Intent(LoginActivity.this,DashboardCircularActivity.class));
         } else {
             setContentView(R.layout.activity_login);
             assignViews();
@@ -126,7 +124,6 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-        /**/
         this.eyeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +139,6 @@ public class LoginActivity extends BaseActivity {
     }
 
     private boolean validateUser() {
-        //sessionManager = new SessionManager(LoginActivity.this);
         if (sessionManager.getSessionUsername().equals("") && sessionManager.getSessionUserId().equals("")) {
             return false;////user not available
         } else {
@@ -191,25 +187,15 @@ public class LoginActivity extends BaseActivity {
                                 sessionManager.updateSessionSsa(response.getUser().getSSA());
                                 sessionManager.updateSessionCustomer(response.getUser().getCustomerName());
 
-
-                                //String s1 = sessionManager.getSessionPreviousUserId().toString();
-                                //String S2 = response.getUser().getId().toString();
-
                                 if (!sessionManager.getSessionPreviousUserId().toString().equals(response.getUser().getId().toString())) {
-                                    //showToast("Another USer Logged in....");
                                     DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
                                     databaseHelper.deleteAllNotification();
                                 }
-                                /*else
-                                {
-                                    showToast("Ok Previous User Log in....");
-                                }*/
                                 sessionManager.updateSessionPreviousUserID(response.getUser().getId());
 
                                 finish();
 
                                 startActivity(new Intent(LoginActivity.this, DashboardCircularActivity.class));
-                                //startActivity(new Intent(LoginActivity.this,DashboardCircularActivity.class));
                             }
                         }
 
@@ -238,7 +224,6 @@ public class LoginActivity extends BaseActivity {
                     new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION,},
                     CHECK_PERMISSIONS);
         } else {
-            //Toast.makeText(LoginActivity.this,"Already Granted",Toast.LENGTH_LONG).show();
         }
     }
 
@@ -246,7 +231,6 @@ public class LoginActivity extends BaseActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case CHECK_PERMISSIONS: {
-                //boolean isPerpermissionForAllGranted = false;
                 if (grantResults.length > 0) {
                     boolean CAMERA = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     boolean READ_EXTERNAL_STORAGE = grantResults[1] == PackageManager.PERMISSION_GRANTED;
@@ -266,16 +250,6 @@ public class LoginActivity extends BaseActivity {
                 }
                 break;
 
-                //DEFAULT CODE BY ANDROID
-                // If request is cancelled, the result arrays are empty.
-                /*if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                } else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-                }
-                return;*/
             }
         }
     }
@@ -293,9 +267,7 @@ public class LoginActivity extends BaseActivity {
         } else if (username.isEmpty()) {
             mLoginEditTextVendorCode.setError(null);
             mLoginEditTextUsername.setError("Field can not be empty");
-        } else /*if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _login_edit_text_email.setError(getString(R.string.error_email_not_valid));
-        } else */if (password.isEmpty()) {
+        } else if (password.isEmpty()) {
             mLoginEditTextVendorCode.setError(null);
             mLoginEditTextUsername.setError(null);
             mLoginEditTextPassword.setError("Field can not be empty");
@@ -304,7 +276,6 @@ public class LoginActivity extends BaseActivity {
 
             if (Conditions.isNetworkConnected(LoginActivity.this)) {
                 doLogin(username, password);
-                // ((MainActivity) getActivity()).onMeetingListSelected();
             } else {
                 Toast.makeText(LoginActivity.this, "Network Eror", Toast.LENGTH_SHORT).show();
             }
@@ -320,7 +291,6 @@ public class LoginActivity extends BaseActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        //Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
         showToast("Click back again to exit.");
 
         new Handler().postDelayed(new Runnable() {

@@ -16,23 +16,17 @@ package com.brahamaputra.mahindra.brahamaputra.Activities;
  * limitations under the License.
  */
 
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
-import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.brahamaputra.mahindra.brahamaputra.R;
 import com.brahamaputra.mahindra.brahamaputra.Utils.Conditions;
@@ -52,7 +46,6 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
     public static final String ARG_LAYOUT = "layout";
 
     protected CircleLayout circleLayout;
-    // protected TextView selectedTextView;
     protected ImageView mDashboard_myMaster;
 
     final public int CHECK_PERMISSIONS = 123;
@@ -68,10 +61,8 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
 
 
         setContentView(R.layout.circular_menu);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         sessionManager = new SessionManager(DashboardCircularActivity.this);
         ImageView imageViewProfilePhoto = (ImageView) findViewById(R.id.imageView2);
-        //CircleImageView imageViewProfilePhoto = (de.hdodenhof.circleimageview.CircleImageView) findViewById(R.id.imageView2);
         alertDialogManager = new AlertDialogManager(DashboardCircularActivity.this);
 
         // Set listeners
@@ -81,7 +72,6 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
         circleLayout.setOnRotationFinishedListener(this);
         circleLayout.setOnCenterClickListener(this);
 
-        //selectedTextView = (TextView) findViewById(R.id.selected_textView);
         toastMessage = new ToastMessage(DashboardCircularActivity.this);
 
         mDashboard_myMaster = (ImageView) findViewById(R.id.dashboard_myMaster);
@@ -107,7 +97,8 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
         });
 
 
-        /////Created By Pranav ////////////////////Handling alertDialog by notification type and redirect to respective activity//////////////////////////////////
+        /////Created By Pranav
+        ////////////////////Handling alertDialog by notification type and redirect to respective activity//////////////////////////////////
         Intent fromNotificationIntent = getIntent();
         String typeId = fromNotificationIntent.getStringExtra("typeId");
         String title = fromNotificationIntent.getStringExtra("title");
@@ -171,10 +162,6 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
             }
         }
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    }
-
-    public void showAlertDialogBox(final String className) {
-
     }
 
     @Override
